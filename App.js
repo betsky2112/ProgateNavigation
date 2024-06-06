@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import React from 'react'
 import Home from './screens/home'
 import Progate from './screens/progate'
+import Contact from './screens/contact'
 
 const Stack = createNativeStackNavigator()
 
@@ -18,7 +19,10 @@ const App = () => {
 					name="Progate"
 					component={Progate}
 				/>
-				<Stack.Screen />
+				<Stack.Screen
+					name="Contact"
+					component={Contact}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	)
