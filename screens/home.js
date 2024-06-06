@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button, StyleSheet, Text, View} from 'react-native'
 
-const home = ({navigation}) => {
+const Home = ({navigation}) => {
 	return (
 		<View style={styles.container}>
 			<Button
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
 	},
 })
 
-export default home
+export default Home
