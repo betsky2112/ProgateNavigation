@@ -1,10 +1,12 @@
 import React, {useEffect} from 'react'
 import {Button, StyleSheet, TextInput, View} from 'react-native'
 
-const Contact = () => {
+const Contact = ({navigation}) => {
 	useEffect(() => {
-		alert('Contact screen is mounted')
-		return () => alert('Contact screen is unmounted')
+		navigation.addListener('beforeRemove', (event) => {
+			event.preventDefault()
+			alert('Are you sure?')
+		})
 	})
 	return (
 		<View style={styles.container}>

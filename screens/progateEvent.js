@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {View, Text, StyleSheet} from 'react-native'
+import {useFocusEffect} from '@react-navigation/native'
 
-const ProgateEvent = () => {
+const ProgateEvent = ({navigation}) => {
 	useEffect(() => {
-		alert('ProgateEvent screen is mounted')
-		return () => alert('ProgateEvent screen is unmounted')
+		navigation.addListener('state', () => alert('navigation state changed'))
 	})
 	return (
 		<View style={styles.container}>
