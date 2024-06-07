@@ -1,10 +1,14 @@
 import React, {useEffect} from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 
-const ProgateService = () => {
+const ProgateService = ({navigation}) => {
 	useEffect(() => {
-		alert('ProgateService screen is mounted')
-		return () => alert('ProgateService screen is unmounted')
+		navigation.addListener('focus', () =>
+			alert('ProgateService screen is focused')
+		)
+		navigation.addListener('blur', () =>
+			alert('ProgateService screen is unfocused')
+		)
 	})
 	return (
 		<View style={styles.container}>
