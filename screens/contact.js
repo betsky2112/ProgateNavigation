@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Button, StyleSheet, TextInput, View} from 'react-native'
 
 const Contact = () => {
+	useEffect(() => {
+		alert('Contact screen is mounted')
+		return () => alert('Contact screen is unmounted')
+	})
 	return (
 		<View style={styles.container}>
 			<TextInput
